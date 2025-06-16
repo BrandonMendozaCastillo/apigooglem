@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "nombre": "Área terrestre principal" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-117, 32],
+            [-117, 14],
+            [-86, 14],
+            [-86, 32],
+            [-117, 32]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "nombre": "Zona prohibida (Isla ficticia)" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-99.5, 19.3],
+          [-99.5, 19.5],
+          [-99.3, 19.5],
+          [-99.3, 19.3],
+          [-99.5, 19.3]
+        ]]
+      }
+    }
+  ]
+}

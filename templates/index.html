@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <meta charset="UTF-8" />
+  <title>Ruta - Algoritmo Manhattan</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; }
+    header { background:#0078d4; color:white; padding:15px; text-align:center; font-size:1.5rem; }
+    #main { display:flex; height:calc(100vh - 60px); }
+    #map { flex:2; }
+    aside { flex:1; padding:15px; box-sizing:border-box; background:#f7f7f7; }
+    .field { margin-bottom:10px; }
+    .field input { width:100%; padding:8px; }
+    .list-suggestions { list-style:none; padding:0; margin:5px 0 10px 0; max-height:120px; overflow:auto; border:1px solid #ccc; }
+    .list-suggestions li { padding:8px; cursor:pointer; }
+    .list-suggestions li:hover { background:#eee; }
+    button { padding:10px 0; width:100%; margin-bottom:10px; cursor:pointer; }
+    button#btn-calcular { background:#28a745; color:white; border:none; }
+    button#btn-reiniciar { background:#dc3545; color:white; border:none; }
+    #datos-ruta { margin-top:10px; }
+  </style>
+</head>
+<body>
+
+<header>Ruta ‑ Algoritmo Manhattan</header>
+
+<div id="main">
+  <div id="map"></div>
+
+  <aside>
+    <div class="field">
+      <label>Origen (municipio o localidad):</label>
+      <input id="input-origen" placeholder="Escribe al menos 3 caracteres..." />
+      <ul id="sug-origen" class="list-suggestions"></ul>
+    </div>
+
+    <div class="field">
+      <label>Destino (municipio o localidad):</label>
+      <input id="input-destino" placeholder="Escribe al menos 3 caracteres..." />
+      <ul id="sug-destino" class="list-suggestions"></ul>
+    </div>
+
+    <button id="btn-calcular" disabled>Calcular ruta</button>
+    <button id="btn-reiniciar">Reiniciar mapa</button>
+
+    <div id="datos-ruta"></div>
+  </aside>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
